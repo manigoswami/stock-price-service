@@ -1,0 +1,85 @@
+= API Documentation for Manig-Stock-Price Service
+
+= API to retrieve Close Price for a Ticker
+
+.request
+include::{snippets}/getClosePriceByDates/http-request.adoc[]
+
+.response
+include::{snippets}/getClosePriceByDates/http-response.adoc[]
+
+.curl
+include::{snippets}/getClosePriceByDates/curl-request.adoc[]
+
+
+.error-cases:: when incorrect date format is used
+include::{snippets}/getClosePriceByDates-InvalidDate/http-request.adoc[]
+
+include::{snippets}/getClosePriceByDates-InvalidDate/http-response.adoc[]
+
+
+.error-cases:: when start date given is greater than end date
+include::{snippets}/getClosePriceByDates-InvalidRequest/http-request.adoc[]
+
+include::{snippets}/getClosePriceByDates-InvalidRequest/http-response.adoc[]
+
+.error-cases:: when an invalid ticker symbol is used
+include::{snippets}/getClosePriceByDates-NotFound/http-request.adoc[]
+
+include::{snippets}/getClosePriceByDates-NotFound/http-response.adoc[]
+
+.error-cases:: when no data is found for dates given
+include::{snippets}/getClosePriceByDates-Dates-In-Advance/http-request.adoc[]
+
+include::{snippets}/getClosePriceByDates-Dates-In-Advance/http-response.adoc[]
+
+
+= API to fetch 200 Days Moving Average for a Ticker
+
+.request
+include::{snippets}/getMovingAverageFor200Days/http-request.adoc[]
+
+.response
+include::{snippets}/getMovingAverageFor200Days/http-response.adoc[]
+
+.curl
+include::{snippets}/getMovingAverageFor200Days/curl-request.adoc[]
+
+.error-cases:: when given an invalid date
+include::{snippets}/getMovingAverageFor200Days-invalid Date/http-request.adoc[]
+
+include::{snippets}/getMovingAverageFor200Days-invalid Date/http-response.adoc[]
+
+.error-cases:: when an invalid ticker is used
+include::{snippets}/getMovingAverageFor200Days-NotFound/http-request.adoc[]
+
+include::{snippets}/getMovingAverageFor200Days-NotFound/http-response.adoc[]
+
+.error-cases:: when no data is found for dates given
+include::{snippets}/getMovingAverageFor200Days-Dates-In-Future/http-request.adoc[]
+
+include::{snippets}/getMovingAverageFor200Days-Dates-In-Future/http-response.adoc[]
+
+= API to pull 200 Days Moving Average for multiple Tickers at once
+
+.request
+include::{snippets}/getMovingAverageFor200DaysCollection/http-request.adoc[]
+
+.response
+include::{snippets}/getMovingAverageFor200DaysCollection/http-response.adoc[]
+
+.curl
+include::{snippets}/getMovingAverageFor200DaysCollection/curl-request.adoc[]
+
+.error-cases:: when no data found for given arguments
+
+include::{snippets}/getMovingAverageFor200DaysCollection-NoData Case/http-request.adoc[]
+
+include::{snippets}/getMovingAverageFor200DaysCollection-NoData Case/http-response.adoc[]
+
+.error-cases:: when invalid ticker is used
+
+include::{snippets}/getMovingAverageFor200DaysCollection-Invalid-Ticker/http-request.adoc[]
+
+include::{snippets}/getMovingAverageFor200DaysCollection-Invalid-Ticker/http-response.adoc[]
+

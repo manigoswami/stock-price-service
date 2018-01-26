@@ -1,0 +1,66 @@
+# Project specific files
+data/
+*.releaseBackup
+_apps
+*.checkstyle
+release.properties
+.springBeans
+.mvn/
+
+# Compiled files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.factorypath
+
+# Eclipse project files
+**/.classpath
+**/.project
+**/.settings/
+.project
+.settings/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Maven target files
+target/
+**/target/
+bin/
+**/bin/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Other files
+metastore_db/
+**/metastore_db/
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+**/dependency-reduced-pom.xml
+*.log
+/.apt_generated/
+test-output/

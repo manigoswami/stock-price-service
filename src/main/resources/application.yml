@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: manig-stockPriceService
+  output:
+    ansi:
+      enabled: never
+    cache:
+        cache-names: close-price-by-dates
+        caffeine:
+            spec: maximumSize=10000, expireAfterAccess=60s, refreshAfterWrite=120s, expireAfterWrite=180s
+logging:
+  file: /log/manig-stockPriceService.log
+  pattern:
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} | manig-stockPriceService | %-10.10thread{10} | %-5level | %-40.40logger{40} | %msg%n'
+    console: "%-5level - %msg%n"
+  level:
+      - info
+      - com.manig.stockprice.io=trace
+
+logging.level.root: info
+logging.level.com.manig.stockprice: info
+operations:
+  serviceURL: https://www.quandl.com/api/v3/datasets/WIKI/%s.json?column_index=%s&start_date=%s&end_date=%s&api_key=_-VymUsU9nzFXKxX3zDM
